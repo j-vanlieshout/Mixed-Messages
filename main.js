@@ -3,7 +3,7 @@
 const vocabFactory = (str, type) => {
     const vocab = {
         str, //The part of the sentence
-        type //Type of string. This could be: [percentage, noun (plural), description, are, fact] 
+        type //Type of string. This could be: [percentage, noun, description, are, fact] 
         //Example: 90% of [percentage] people [noun (plural)] in Autralia [description] are [are] blind [fact]
     }
     return vocab
@@ -13,10 +13,6 @@ const vocabFactory = (str, type) => {
 //s1 = [precentage, noun(plural), description, are, fact]
 //s2 = [description, , percentage, noun (plural) , are fact] !!extra comma!!
 // [presentence, s1] (are you suggesting that 90% of ....) (is it true that... )
-
-
-//create array of vocab [obj.type]. Filter for type. 
-
 
 const nouns = ['people','women', 'men', 'animals', 'movies lovers', 'daytraders', 'kings'];
 const makePercentages = nums =>{
@@ -32,6 +28,7 @@ const are = ['are'];
 const facts = ['blue', 'afraid of mice', 'nightblind', 'living in fear of large boulders', 'happier than their neighbours', 'behind your curtains'];
 const presentences = ['Did you know that', 'Are you are that'];
 const structures = [['percentage', , 'noun', 'description', 'are', 'fact'],['percentage', 'noun', 'are', 'fact']];
+
 
 const selectWord = (arr) => {
     return word = arr[Math.floor(Math.random()*arr.length)];
